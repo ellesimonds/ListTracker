@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.submitButton);
         listOfTasks = findViewById(R.id.listOfTasks);
 
-        //create an ArrayList and adapter to display the list
+        //create an ArrayList and an adapter to display the list
         taskList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, taskList);
         listOfTasks.setAdapter(adapter);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     taskList.add(entry);
                     adapter.notifyDataSetChanged(); // refresh list
 
-                    // Clear inputs
+                    //clear inputs
                     taskInput.setText("");
                     nameInput.setText("");
                 }
